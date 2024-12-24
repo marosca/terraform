@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.h1,
+.h2 {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.ul li {
+  padding: 10px;
+  list-style: none;
+}

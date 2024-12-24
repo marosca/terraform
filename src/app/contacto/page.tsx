@@ -1,5 +1,5 @@
 import { ClientComponet } from '@/components/client-component/client-component';
-import styles from './common.module.css';
+import styles from '../common.module.css';
 import Link from 'next/link';
 
 interface User {
@@ -11,7 +11,7 @@ interface User {
 }
 
 export default async function UsersPage() {
-  const res = await fetch('https://reqres.in/api/users?page=2', {
+  const res = await fetch('https://reqres.in/api/users?page=1', {
     next: { tags: ['all'] },
   });
 
@@ -24,9 +24,9 @@ export default async function UsersPage() {
   return (
     <>
       <div className={styles.wrapper}>
-        <Link href='/contacto'>Contacto</Link>
-        <h1 className={styles.h1}>Home</h1>
-        <h2 className={styles.h2}>Users List</h2>
+        <Link href='/'>Home</Link>
+        <h1 className={styles.h1}>Contacto</h1>
+        <h2 className={styles.h2}>Otros Usuarios</h2>
         <ul className={styles.ul}>
           {data.data.map((user: User) => (
             <li key={user?.id}>
